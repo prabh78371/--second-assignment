@@ -1,8 +1,9 @@
 # created by prabhjot kaur
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Good afternoon Prabhjot kaur")
+def homepage(request):
+    Name = {'name' : 'Prabhjot'}
+    return render(request, 'priya.html', Name)
 
-def pkaur(request):
-    return HttpResponse("How are you today?")
+
